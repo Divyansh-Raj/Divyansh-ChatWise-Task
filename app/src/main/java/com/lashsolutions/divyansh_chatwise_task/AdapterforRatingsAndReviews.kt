@@ -40,7 +40,7 @@ class AdapterforRatingsAndReviews (private val context : Context,private val rat
             holder.star4,
             holder.star5,
         )
-        updateRatingStars(starViews,reviewOfOneUser.rating)
+        updateRatingStars(starViews,reviewOfOneUser.rating!!)
     }
 
     inner class AdapterforRatingsAndReviewsVH(itemView: View): RecyclerView.ViewHolder(itemView) {

@@ -57,7 +57,7 @@ class AdapterForProductsList(private val context: Context,private val items: Lis
                     holder.star4,
                     holder.star5,
                 )
-                updateRatingStars(starViews,productDataModel.rating)
+                updateRatingStars(starViews,productDataModel.rating!!)
 
                 //load the image into the imageview
                 Picasso.get()

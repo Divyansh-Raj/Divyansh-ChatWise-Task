@@ -45,7 +45,7 @@ class ProductDetails : AppCompatActivity() {
 
         //load the image into the imageview
         Picasso.get()
-            .load(productDetails!!.images.get(0))
+            .load(productDetails!!.images!!.get(0))
             .placeholder(R.drawable.product_placeholder_image)
             .error(R.drawable.product_placeholder_image)
             .into(iv_productImageAtTop)
@@ -55,7 +55,7 @@ class ProductDetails : AppCompatActivity() {
         tv_productPriceInProductDetails.text="$ ${productDetails.price}"
 
         tv_minimumOrderValue.text=productDetails.minimumOrderQuantity.toString()
-        tv_warrantyValue.text=productDetails.warrantyInformation
+        tv_warrantyValue.text="6 months"
 
         tv_descriptionValue.text=productDetails.description
 
@@ -68,11 +68,11 @@ class ProductDetails : AppCompatActivity() {
             findViewById<ImageView>(R.id.star5),
 
         )
-        updateRatingStars(starViews,productDetails.rating)
+        updateRatingStars(starViews,productDetails.rating!!)
 
         //set the adapter for the ratings and the reviews
         rv_ratingsAndReview.layoutManager=LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
-        val adapterForRatingsAndReviews=AdapterforRatingsAndReviews(this,productDetails.reviews)
+        val adapterForRatingsAndReviews=AdapterforRatingsAndReviews(this,productDetails.reviews!!)
         rv_ratingsAndReview.adapter=adapterForRatingsAndReviews
 
     }
