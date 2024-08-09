@@ -8,6 +8,20 @@
     android:background="@color/primaryMainBackgroundColor"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/tv_HomeHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_heading"
+        android:textColor="@color/textColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="12dp"
+        />
+
     <!-- Button for viewing products -->
     <Button
         android:id="@+id/btn_viewProducts"

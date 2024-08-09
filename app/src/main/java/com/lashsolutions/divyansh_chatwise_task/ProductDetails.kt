@@ -52,7 +52,7 @@ class ProductDetails : AppCompatActivity() {
 
         //set the details of the product in the views
         tv_productTitleInProductDetails.text=productDetails.title
-        tv_productPriceInProductDetails.text=productDetails.price.toString()
+        tv_productPriceInProductDetails.text="$ ${productDetails.price}"
 
         tv_minimumOrderValue.text=productDetails.minimumOrderQuantity.toString()
         tv_warrantyValue.text=productDetails.warrantyInformation
